@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiveHub - 音楽フェス・ライブ情報サイト</title>
+    <title>AnimeHub - アニメ情報サイト</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <style>
@@ -19,7 +19,7 @@
         }
 
         .hero-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #ffdc74 20%, #ff9b5d 80%);
             color: white;
             padding: 100px 0;
             margin-bottom: 40px;
@@ -34,7 +34,6 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('https://placehold.co/1920x600/667eea/ffffff?text=Music+Festival') center/cover;
             opacity: 0.2;
         }
 
@@ -138,7 +137,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-music-note-beamed"></i> LiveHub
+                <i class="bi bi-music-note-beamed"></i> AnimeHub
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -149,16 +148,16 @@
                         <a class="nav-link active" href="#">ホーム</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">イベント一覧</a>
+                        <a class="nav-link" href="anime-list.html">アニメ作品一覧</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">アーティスト</a>
+                        <a class="nav-link" href="anime-company-list.html">制作会社一覧</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">チケット購入</a>
+                        <a class="nav-link" href="anime-goods.html">公式グッズ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">マイチケット</a>
+                        <a class="nav-link" href="anime-history.html">購入履歴</a>
                     </li>
                 </ul>
                 <button class="btn btn-warning ms-3 fw-bold">
@@ -171,13 +170,13 @@
     <!-- ヒーローセクション -->
     <div class="hero-section">
         <div class="container hero-content text-center">
-            <h1 class="display-3 fw-bold mb-4">音楽で繋がる、最高の体験を</h1>
-            <p class="lead mb-4">日本全国の音楽フェス・ライブ情報をここで</p>
+            <h1 class="display-3 fw-bold mb-4">アニメで繋がる、最高の体験を</h1>
+            <p class="lead mb-4">あらゆる世界観のアニメ情報をここで</p>
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="アーティスト名、イベント名で検索...">
-                        <button class="btn btn-warning fw-bold" type="button">
+                        <input type="text" class="form-control" placeholder="アニメタイトルで検索...">
+                        <button class="btn btn-info fw-bold" type="button">
                             <i class="bi bi-search"></i> 検索
                         </button>
                     </div>
@@ -185,79 +184,41 @@
             </div>
             <div class="mt-4">
                 <button class="btn btn-outline-light btn-lg me-2">
-                    <i class="bi bi-calendar-event"></i> イベントを探す
+                    <i class="bi bi-film"></i> アニメを探す
                 </button>
                 <button class="btn btn-light btn-lg">
-                    <i class="bi bi-ticket-perforated"></i> チケット購入
+                    <i class="bi bi-cart"></i> グッズ購入
                 </button>
             </div>
         </div>
     </div>
 
     <div class="container">
-        <!-- カウントダウン -->
-        <div class="countdown-section">
-            <div class="container">
-                <h3 class="text-center mb-4 fw-bold">
-                    <i class="bi bi-alarm"></i> 次回開催まで
-                </h3>
-                <div class="row text-center">
-                    <div class="col-3">
-                        <div class="countdown-box">
-                            <div class="countdown-number">15</div>
-                            <div>日</div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="countdown-box">
-                            <div class="countdown-number">08</div>
-                            <div>時間</div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="countdown-box">
-                            <div class="countdown-number">42</div>
-                            <div>分</div>
-                        </div>
-                    </div>
-                    <div class="col-3">
-                        <div class="countdown-box">
-                            <div class="countdown-number">33</div>
-                            <div>秒</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt-4">
-                    <h5>SUMMER MUSIC FESTIVAL 2024</h5>
-                    <p class="mb-0">2024年12月3日 @ 東京ビッグサイト</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- 開催予定イベント -->
+        <!-- 放送開始アニメ -->
         <section class="mb-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="fw-bold">
-                    <i class="bi bi-calendar-check text-danger"></i> 開催予定イベント
+                    <i class="bi bi-calendar-check text-danger"></i> 放送開始アニメ
                 </h2>
                 <a href="#" class="btn btn-outline-primary">すべて見る <i class="bi bi-arrow-right"></i></a>
             </div>
 
+            <!-- 呪術廻戦 -->
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/ff6b6b/ffffff?text=Summer+Fest" class="card-img-top"
-                                alt="Summer Festival">
+                            <img src="img/jujutu.jpg" class="card-img-top"
+                                alt="呪術廻戦">
                             <div class="event-date-badge">
-                                <div class="day">03</div>
-                                <div class="month">12月</div>
+                                <div class="day">08</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge bg-danger genre-badge mb-2">ロック</span>
                             <span class="badge bg-warning text-dark genre-badge mb-2">ポップ</span>
-                            <h5 class="card-title fw-bold">SUMMER MUSIC FESTIVAL 2024</h5>
+                            <h5 class="card-title fw-bold">呪術廻戦 死滅回遊 前編</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> 東京ビッグサイト
                             </p>
@@ -266,30 +227,31 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥8,000〜</small>
+                                    <small class="text-muted">芥見下々</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- フリーレン -->
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/4ecdc4/ffffff?text=Rock+Night" class="card-img-top"
-                                alt="Rock Night">
+                            <img src="img/frieren.jpg" class="card-img-top"
+                                alt="フリーレン">
                             <div class="event-date-badge">
-                                <div class="day">10</div>
-                                <div class="month">12月</div>
+                                <div class="day">16</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge bg-dark genre-badge mb-2">ロック</span>
                             <span class="badge bg-secondary genre-badge mb-2">メタル</span>
-                            <h5 class="card-title fw-bold">ROCK NIGHT JAPAN</h5>
+                            <h5 class="card-title fw-bold">葬送のフリーレン 第2期</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> 大阪城ホール
                             </p>
@@ -298,30 +260,31 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥6,500〜</small>
+                                    <small class="text-muted">山田鐘人・アベツカサ</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 推しの子 -->
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/ffe66d/333333?text=Jazz+Live" class="card-img-top"
-                                alt="Jazz Live">
+                            <img src="img/Oshinoko.jpg" class="card-img-top"
+                                alt="推しの子">
                             <div class="event-date-badge">
-                                <div class="day">15</div>
-                                <div class="month">12月</div>
+                                <div class="day">14</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge bg-info genre-badge mb-2">ジャズ</span>
                             <span class="badge bg-primary genre-badge mb-2">ブルース</span>
-                            <h5 class="card-title fw-bold">TOKYO JAZZ SESSION</h5>
+                            <h5 class="card-title fw-bold">推しの子 第3期</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> ブルーノート東京
                             </p>
@@ -330,30 +293,31 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-warning text-dark">残りわずか</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥9,800〜</small>
+                                    <small class="text-muted">赤坂アカ×横槍メンゴ</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- ぬ～べ～ -->
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/a855f7/ffffff?text=EDM+Party" class="card-img-top"
-                                alt="EDM Party">
+                            <img src="img/nu-be-.jpg" class="card-img-top"
+                                alt="ぬ～べ～">
                             <div class="event-date-badge">
-                                <div class="day">20</div>
-                                <div class="month">12月</div>
+                                <div class="day">07</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge genre-badge mb-2" style="background-color: #a855f7;">EDM</span>
                             <span class="badge bg-info genre-badge mb-2">エレクトロ</span>
-                            <h5 class="card-title fw-bold">ELECTRO WAVE FESTIVAL</h5>
+                            <h5 class="card-title fw-bold">地獄先生ぬ～べ～ 第2クール</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> 幕張メッセ
                             </p>
@@ -362,30 +326,31 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥7,500〜</small>
+                                    <small class="text-muted">真倉翔</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Fake -->
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/10b981/ffffff?text=Acoustic+Live"
-                                class="card-img-top" alt="Acoustic Live">
+                            <img src="img/Fake.jpg"
+                                class="card-img-top" alt="Fake">
                             <div class="event-date-badge">
-                                <div class="day">25</div>
-                                <div class="month">12月</div>
+                                <div class="day">03</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge bg-success genre-badge mb-2">アコースティック</span>
                             <span class="badge bg-warning text-dark genre-badge mb-2">フォーク</span>
-                            <h5 class="card-title fw-bold">WINTER ACOUSTIC NIGHT</h5>
+                            <h5 class="card-title fw-bold">Fate/strange Fake</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> なんばHatch
                             </p>
@@ -394,30 +359,31 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥5,500〜</small>
+                                    <small class="text-muted">成田良悟・TYPE-MOON</small>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- 勇者パーティー -->
                 <div class="col-md-4">
                     <div class="card event-card">
                         <div class="position-relative">
-                            <img src="https://placehold.co/400x250/f59e0b/ffffff?text=Hip+Hop+Live" class="card-img-top"
-                                alt="Hip Hop Live">
+                            <img src="img/kokuhaku.png" class="card-img-top"
+                                alt="勇者パーティー">
                             <div class="event-date-badge">
-                                <div class="day">28</div>
-                                <div class="month">12月</div>
+                                <div class="day">06</div>
+                                <div class="month">1月</div>
                             </div>
                         </div>
                         <div class="card-body">
                             <span class="badge genre-badge mb-2" style="background-color: #f59e0b;">ヒップホップ</span>
                             <span class="badge bg-dark genre-badge mb-2">R&B</span>
-                            <h5 class="card-title fw-bold">URBAN BEATS FESTIVAL</h5>
+                            <h5 class="card-title fw-bold">勇者パーティーにかわいい子がいたので、告白してみた。</h5>
                             <p class="text-muted mb-2">
                                 <i class="bi bi-geo-alt-fill text-danger"></i> Zepp Tokyo
                             </p>
@@ -426,10 +392,10 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div>
-                                    <span class="badge bg-danger">完売間近</span>
+                                    <span class="badge bg-success">放送中</span>
                                 </div>
                                 <div class="text-end">
-                                    <small class="text-muted">¥6,000〜</small>
+                                    <small class="text-muted">水星・海李</small>
                                 </div>
                             </div>
                         </div>
@@ -442,7 +408,7 @@
         <section class="mb-5">
             <div class="d-flex justify-content-between align-items-center mb-4">
                 <h2 class="fw-bold">
-                    <i class="bi bi-star-fill text-warning"></i> 人気アーティスト
+                    <i class="bi bi-star-fill text-warning"></i> 人気アニメ
                 </h2>
                 <a href="#" class="btn btn-outline-primary">すべて見る <i class="bi bi-arrow-right"></i></a>
             </div>
@@ -450,81 +416,81 @@
             <div class="row g-4">
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/ff6b6b/ffffff?text=Artist+1" class="artist-img mb-3"
-                            alt="アーティスト1">
-                        <h5 class="fw-bold mb-1">THE ROCKERS</h5>
-                        <p class="text-muted small mb-2">ロックバンド</p>
+                        <img src="img/frieren.jpg" class="artist-img mb-3"
+                            alt="葬送のフリーレン">
+                        <h5 class="fw-bold mb-1">葬送のフリーレン</h5>
+                        <p class="text-muted small mb-2">ファンタジー冒険</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge bg-danger">ロック</span>
+                            <span class="badge bg-danger">冒険</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/4ecdc4/ffffff?text=Artist+2" class="artist-img mb-3"
-                            alt="アーティスト2">
-                        <h5 class="fw-bold mb-1">DJ WAVE</h5>
-                        <p class="text-muted small mb-2">DJ / プロデューサー</p>
+                        <img src="img/jujutu.jpg" class="artist-img mb-3"
+                            alt="呪術廻戦">
+                        <h5 class="fw-bold mb-1">呪術廻戦</h5>
+                        <p class="text-muted small mb-2">バトルアクション</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge" style="background-color: #a855f7;">EDM</span>
+                            <span class="badge" style="background-color: #a855f7;">アクション</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/ffe66d/333333?text=Artist+3" class="artist-img mb-3"
-                            alt="アーティスト3">
-                        <h5 class="fw-bold mb-1">JAZZ QUINTET</h5>
-                        <p class="text-muted small mb-2">ジャズバンド</p>
+                        <img src="img/Oshinoko.jpg" class="artist-img mb-3"
+                            alt="推しの子">
+                        <h5 class="fw-bold mb-1">推しの子</h5>
+                        <p class="text-muted small mb-2">ドラマ・サスペンス</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge bg-info">ジャズ</span>
+                            <span class="badge bg-info">ドラマ</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/10b981/ffffff?text=Artist+4" class="artist-img mb-3"
-                            alt="アーティスト4">
-                        <h5 class="fw-bold mb-1">ACOUSTIC DUO</h5>
-                        <p class="text-muted small mb-2">アコースティック</p>
+                        <img src="img/Fake.jpg" class="artist-img mb-3"
+                            alt="FAKE">
+                        <h5 class="fw-bold mb-1">Fate/strange Fake</h5>
+                        <p class="text-muted small mb-2">サスペンス・謎解き</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge bg-success">フォーク</span>
+                            <span class="badge bg-success">謎解き</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/f59e0b/ffffff?text=Artist+5" class="artist-img mb-3"
-                            alt="アーティスト5">
-                        <h5 class="fw-bold mb-1">MC FLOW</h5>
-                        <p class="text-muted small mb-2">ラッパー</p>
+                        <img src="img/kokuhaku.png" class="artist-img mb-3"
+                            alt="告白">
+                        <h5 class="fw-bold mb-1">勇者パーティーにかわいい子がいたので、告白してみた。</h5>
+                        <p class="text-muted small mb-2">青春・ドラマ</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge" style="background-color: #f59e0b;">ヒップホップ</span>
+                            <span class="badge" style="background-color: #f59e0b;">青春</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/ec4899/ffffff?text=Artist+6" class="artist-img mb-3"
-                            alt="アーティスト6">
-                        <h5 class="fw-bold mb-1">POP STARS</h5>
-                        <p class="text-muted small mb-2">ポップグループ</p>
+                        <img src="img/nu-be-.jpg" class="artist-img mb-3"
+                            alt="ぬーべー">
+                        <h5 class="fw-bold mb-1">地獄先生ぬ～べ～</h5>
+                        <p class="text-muted small mb-2">ホラー・コメディ</p>
                         <div class="d-flex justify-content-center gap-2">
-                            <span class="badge bg-warning text-dark">ポップ</span>
+                            <span class="badge bg-warning text-dark">ホラー</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/8b5cf6/ffffff?text=Artist+7" class="artist-img mb-3"
-                            alt="アーティスト7">
-                        <h5 class="fw-bold mb-1">METAL FORCE</h5>
+                        <img src="img/dandadan.jpg" class="artist-img mb-3"
+                            alt="アニメ7">
+                        <h5 class="fw-bold mb-1">ダンダダン</h5>
                         <p class="text-muted small mb-2">メタルバンド</p>
                         <div class="d-flex justify-content-center gap-2">
                             <span class="badge bg-dark">メタル</span>
@@ -534,9 +500,9 @@
 
                 <div class="col-6 col-md-3">
                     <div class="artist-card text-center">
-                        <img src="https://placehold.co/200x200/3b82f6/ffffff?text=Artist+8" class="artist-img mb-3"
-                            alt="アーティスト8">
-                        <h5 class="fw-bold mb-1">SOUL SINGER</h5>
+                        <img src="img/chainsaw-man.jpg" class="artist-img mb-3"
+                            alt="アニメ8">
+                        <h5 class="fw-bold mb-1">チェンソーマン</h5>
                         <p class="text-muted small mb-2">ソウルシンガー</p>
                         <div class="d-flex justify-content-center gap-2">
                             <span class="badge bg-primary">R&B</span>
@@ -556,9 +522,9 @@
                     <a href="#" class="text-decoration-none">
                         <div class="card text-center h-100 border-danger">
                             <div class="card-body">
-                                <i class="bi bi-guitar display-4 text-danger"></i>
-                                <h5 class="mt-3">ロック</h5>
-                                <small class="text-muted">45イベント</small>
+                                <i class="bi bi-lightning-fill display-4 text-danger"></i>
+                                <h5 class="mt-3">バトル</h5>
+                                <small class="text-muted">12作品</small>
                             </div>
                         </div>
                     </a>
@@ -567,9 +533,9 @@
                     <a href="#" class="text-decoration-none">
                         <div class="card text-center h-100 border-warning">
                             <div class="card-body">
-                                <i class="bi bi-mic-fill display-4 text-warning"></i>
-                                <h5 class="mt-3">ポップ</h5>
-                                <small class="text-muted">38イベント</small>
+                                <i class="bi bi-heart display-4 text-warning"></i>
+                                <h5 class="mt-3">ラブコメ</h5>
+                                <small class="text-muted">18作品</small>
                             </div>
                         </div>
                     </a>
@@ -578,9 +544,9 @@
                     <a href="#" class="text-decoration-none">
                         <div class="card text-center h-100" style="border-color: #a855f7;">
                             <div class="card-body">
-                                <i class="bi bi-disc-fill display-4" style="color: #a855f7;"></i>
-                                <h5 class="mt-3">EDM</h5>
-                                <small class="text-muted">32イベント</small>
+                                <i class="bi bi-star display-4" style="color: #a855f7;"></i>
+                                <h5 class="mt-3">ファンタジー</h5>
+                                <small class="text-muted">16作品</small>
                             </div>
                         </div>
                     </a>
@@ -589,9 +555,9 @@
                     <a href="#" class="text-decoration-none">
                         <div class="card text-center h-100 border-info">
                             <div class="card-body">
-                                <i class="bi bi-music-note-list display-4 text-info"></i>
-                                <h5 class="mt-3">ジャズ</h5>
-                                <small class="text-muted">28イベント</small>
+                                <i class="bi bi-chat-dots display-4 text-info"></i>
+                                <h5 class="mt-3">日常</h5>
+                                <small class="text-muted">14作品</small>
                             </div>
                         </div>
                     </a>
@@ -605,8 +571,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 mb-3">
-                    <h5 class="fw-bold mb-3"><i class="bi bi-music-note-beamed"></i> LiveHub</h5>
-                    <p class="text-light">音楽で繋がる、最高の体験をあなたに。</p>
+                    <h5 class="fw-bold mb-3"><i class="bi bi-music-note-beamed"></i> AnimeHub</h5>
+                    <p class="text-light">アニメで繋がる、最高の体験をあなたに。</p>
                 </div>
                 <div class="col-md-2 mb-3">
                     <h6 class="fw-bold mb-3">サイト情報</h6>
@@ -635,6 +601,6 @@
                 </div>
             </div>
             <hr class="border-light">
-            <p class="text-center text-light mb-0">&copy; 2024 LiveHub. All rights reserved.</p>
+            <p class="text-center text-light mb-0">&copy; 2024 AnimeHub. All rights reserved.</p>
         </div>
     </footer>
