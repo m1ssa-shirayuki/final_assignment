@@ -6,6 +6,7 @@
     <title>アニメ作品一覧 - AnimeHub</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="icon" href="/img/anime-favicon.png">
     <style>
         :root {
             --primary-color: #8b5cf6;
@@ -127,8 +128,8 @@
     <!-- ナビゲーションバー -->
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-music-note-beamed"></i> AnimeHub
+            <a class="navbar-brand fw-bold" href="./index.html">
+                <i class="bi bi-star-fill"></i> AnimeHub
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -136,7 +137,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">ホーム</a>
+                        <a class="nav-link" href="./index.html">ホーム</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">アニメ作品一覧</a>
@@ -151,9 +152,9 @@
                         <a class="nav-link" href="anime-history.html">購入履歴</a>
                     </li>
                 </ul>
-                <button class="btn btn-light ms-3 fw-bold">
+                <a href="anime-login-page.html" class="btn btn-warning ms-3 fw-bold">
                     <i class="bi bi-person-circle"></i> ログイン
-                </button>
+                </a>
             </div>
         </div>
     </nav>
@@ -256,28 +257,67 @@
                     <!-- 制作会社 -->
                     <div class="filter-section">
                         <h6 class="fw-bold mb-3">制作会社</h6>
+                    
                         <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue1">
-                            <label class="form-check-label" for="venue1">
+                            <input class="form-check-input" type="checkbox" id="studio1">
+                            <label class="form-check-label" for="studio1">
                                 MAPPA <span class="badge bg-secondary">67</span>
                             </label>
                         </div>
+                    
                         <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue2">
-                            <label class="form-check-label" for="venue2">
+                            <input class="form-check-input" type="checkbox" id="studio2">
+                            <label class="form-check-label" for="studio2">
                                 ufotable <span class="badge bg-secondary">45</span>
                             </label>
                         </div>
+                    
                         <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue3">
-                            <label class="form-check-label" for="venue3">
+                            <input class="form-check-input" type="checkbox" id="studio3">
+                            <label class="form-check-label" for="studio3">
                                 A-1 Pictures <span class="badge bg-secondary">32</span>
                             </label>
                         </div>
+                    
                         <div class="form-check mb-2">
-                            <input class="form-check-input" type="checkbox" id="venue4">
-                            <label class="form-check-label" for="venue4">
+                            <input class="form-check-input" type="checkbox" id="studio4">
+                            <label class="form-check-label" for="studio4">
                                 CloverWorks <span class="badge bg-secondary">28</span>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="studio5">
+                            <label class="form-check-label" for="studio5">
+                                京都アニメーション <span class="badge bg-secondary">26</span>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="studio6">
+                            <label class="form-check-label" for="studio6">
+                                ボンズ <span class="badge bg-secondary">24</span>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="studio7">
+                            <label class="form-check-label" for="studio7">
+                                Production I.G <span class="badge bg-secondary">22</span>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="studio8">
+                            <label class="form-check-label" for="studio8">
+                                SHAFT <span class="badge bg-secondary">19</span>
+                            </label>
+                        </div>
+                    
+                        <div class="form-check mb-2">
+                            <input class="form-check-input" type="checkbox" id="studio9">
+                            <label class="form-check-label" for="studio9">
+                                東映アニメーション <span class="badge bg-secondary">40</span>
                             </label>
                         </div>
                     </div>
@@ -305,9 +345,9 @@
                         </div>
                     </div>
 
-                    <!-- 視聴状況 -->
+                    <!-- 配信状況 -->
                     <div class="filter-section">
-                        <h6 class="fw-bold mb-3">視聴状況</h6>
+                        <h6 class="fw-bold mb-3">配信状況</h6>
                         <div class="form-check mb-2">
                             <input class="form-check-input" type="checkbox" id="status1" checked>
                             <label class="form-check-label" for="status1">
@@ -328,7 +368,7 @@
                         </div>
                     </div>
 
-                    <button class="btn btn-outline-danger w-100 mb-2">
+                    <button id="clearFilterBtn" class="btn btn-outline-danger w-100 mb-2" type="button">
                         <i class="bi bi-x-circle"></i> フィルターをクリア
                     </button>
                 </div>
@@ -349,7 +389,7 @@
                             <i class="bi bi-fire"></i> 人気順
                         </button>
                         <button type="button" class="btn btn-outline-primary sort-btn">
-                            <i class="bi bi-currency-yen"></i> 五十音順
+                            <i class="bi bi-sort-alpha-down"></i> 五十音順
                         </button>
                     </div>
                 </div>
@@ -376,24 +416,55 @@
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月3日
+                                            <i class="bi bi-calendar-event"></i> 10月11日
                                         </span>
                                     </div>
                                     <span class="badge bg-success">配信中</span>
                                 </div>
                                 <h5 class="card-title fw-bold mb-2">チェンソーマン</h5>
                                 <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i>MAPPA
+                                    <i class="bi bi-building-fill"></i>MAPPA
                                 </p>
                                 <div class="d-flex gap-2 mb-3">
                                     <span class="badge" style="background-color: #fee2e2; color: #991b1b;">バトル</span>
-                                    <span class="badge" style="background-color: #fef3c7; color: #92400e;"></span>
                                 </div>
                                 <p class="card-text text-muted small mb-3">
-                                    今年も夏の大型フェスが開催!豪華アーティスト50組以上が出演する国内最大級の音楽フェスティバル
+                                    悪魔と契約した少年が過酷な運命に身を投じる、衝撃のダークバトルアクション。
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥8,000〜</div>
+                                    <div class="price-tag">1クール</div>
+                                    <button class="btn btn-primary">
+                                        詳細を見る <i class="bi bi-arrow-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <div class="card event-list-card">
+                            <img src="img/frieren2.jpg" class="event-list-img" alt="葬送のフリーレン">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start mb-2">
+                                    <div>
+                                        <span class="date-badge">
+                                            <i class="bi bi-calendar-event"></i> 1月16日
+                                        </span>
+                                    </div>
+                                    <span class="badge bg-success">配信中</span>
+                                </div>
+                                <h5 class="card-title fw-bold mb-2">葬送のフリーレン</h5>
+                                <p class="venue-badge mb-3">
+                                    <i class="bi bi-building-fill"></i> マッドハウス
+                                </p>
+                                <div class="d-flex gap-2 mb-3">
+                                    <span class="badge" style="background-color: #e0e7ff; color: #3730a3;">ファンタジー</span>
+                                </div>
+                                <p class="card-text text-muted small mb-3">
+                                    勇者亡き後の世界で描かれる、魔法使いフリーレンの静かで切ない後日譚。
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="price-tag">2クール</div>
                                     <button class="btn btn-primary">
                                         詳細を見る <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -404,29 +475,31 @@
 
                     <div class="col-md-6">
                         <div class="card event-list-card">
-                            <img src="https://placehold.co/600x200/ec4899/ffffff?text=Rock+Night" class="event-list-img" alt="Rock Night">
+                            <img src="img/jujutu2.jpg" class="event-list-img" alt="呪術廻戦">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月10日
-                                        </span>
-                                    </div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="date-badge">
+                                        <i class="bi bi-calendar-event"></i> 10月3日
+                                    </span>
+                                    <span class="badge bg-success">配信中</span>
                                 </div>
-                                <h5 class="card-title fw-bold mb-2">ROCK NIGHT JAPAN</h5>
+                    
+                                <h5 class="card-title fw-bold mb-2">呪術廻戦</h5>
+                    
                                 <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i> 大阪城ホール
+                                    <i class="bi bi-building-fill"></i> MAPPA
                                 </p>
+                    
                                 <div class="d-flex gap-2 mb-3">
-                                    <span class="badge" style="background-color: #fee2e2; color: #991b1b;">ロック</span>
-                                    <span class="badge" style="background-color: #1f2937; color: white;">メタル</span>
+                                    <span class="badge" style="background-color: #fee2e2; color: #991b1b;">バトル</span>
                                 </div>
+                    
                                 <p class="card-text text-muted small mb-3">
-                                    日本を代表するロックバンドが集結する一夜限りのスペシャルライブ。圧倒的なパフォーマンスを体感せよ
+                                    呪いと呪術師が交錯する現代日本を舞台にした、ダークバトルアクション。
                                 </p>
+                    
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥6,500〜</div>
+                                    <div class="price-tag">2クール</div>
                                     <button class="btn btn-primary">
                                         詳細を見る <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -437,29 +510,31 @@
 
                     <div class="col-md-6">
                         <div class="card event-list-card">
-                            <img src="https://placehold.co/600x200/06b6d4/ffffff?text=Jazz+Live" class="event-list-img" alt="Jazz Live">
+                            <img src="img/Oshinoko.jpg" class="event-list-img" alt="推しの子">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月15日
-                                        </span>
-                                    </div>
-                                    <span class="badge bg-warning text-dark">残りわずか</span>
+                                    <span class="date-badge">
+                                        <i class="bi bi-calendar-event"></i> 4月12日
+                                    </span>
+                                    <span class="badge bg-success">配信中</span>
                                 </div>
-                                <h5 class="card-title fw-bold mb-2">TOKYO JAZZ SESSION</h5>
+                    
+                                <h5 class="card-title fw-bold mb-2">推しの子</h5>
+                    
                                 <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i> ブルーノート東京
+                                    <i class="bi bi-building-fill"></i> 動画工房
                                 </p>
+                    
                                 <div class="d-flex gap-2 mb-3">
-                                    <span class="badge" style="background-color: #dbeafe; color: #1e40af;">ジャズ</span>
-                                    <span class="badge" style="background-color: #ddd6fe; color: #5b21b6;">ブルース</span>
+                                    <span class="badge" style="background-color: #e0e7ff; color: #3730a3;">ファンタジー</span>
                                 </div>
+                    
                                 <p class="card-text text-muted small mb-3">
-                                    世界的ジャズミュージシャンによる贅沢なセッションライブ。大人の音楽空間をお楽しみください
+                                    芸能界の光と闇を描く、衝撃と愛が交錯するサスペンスラブストーリー。
                                 </p>
+                    
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥9,800〜</div>
+                                    <div class="price-tag">2クール</div>
                                     <button class="btn btn-primary">
                                         詳細を見る <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -470,29 +545,29 @@
 
                     <div class="col-md-6">
                         <div class="card event-list-card">
-                            <img src="https://placehold.co/600x200/a855f7/ffffff?text=EDM+Party" class="event-list-img" alt="EDM Party">
+                            <img src="img/nu-be-.jpg" class="event-list-img" alt="地獄先生ぬ～べ～">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月20日
+                                            <i class="bi bi-calendar-event"></i> 7月2日
                                         </span>
                                     </div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">配信中</span>
                                 </div>
-                                <h5 class="card-title fw-bold mb-2">ELECTRO WAVE FESTIVAL</h5>
+                                <h5 class="card-title fw-bold mb-2">地獄先生ぬ～べ～</h5>
                                 <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i> 幕張メッセ
+                                    <i class="bi bi-building-fill"></i> スタジオKAI
                                 </p>
                                 <div class="d-flex gap-2 mb-3">
-                                    <span class="badge" style="background-color: #e0e7ff; color: #3730a3;">EDM</span>
-                                    <span class="badge" style="background-color: #dbeafe; color: #1e40af;">エレクトロ</span>
+                                    <span class="badge" style="background-color: #ede9fe; color: #4c1d95;">ホラー</span>
                                 </div>
                                 <p class="card-text text-muted small mb-3">
-                                    世界トップクラスのDJが集結!踊り明かす最高の一夜。最先端のサウンドシステムで極上の体験を
+                                    霊能力教師ぬ～べ～が怪異に立ち向かう学園ホラー作品。<br>
+                                    <br>
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥7,500〜</div>
+                                    <div class="price-tag">2クール</div>
                                     <button class="btn btn-primary">
                                         詳細を見る <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -503,62 +578,28 @@
 
                     <div class="col-md-6">
                         <div class="card event-list-card">
-                            <img src="https://placehold.co/600x200/10b981/ffffff?text=Acoustic+Live" class="event-list-img" alt="Acoustic Live">
+                            <img src="img/dandadan.jpg" class="event-list-img" alt="ダンダダン">
                             <div class="card-body">
                                 <div class="d-flex justify-content-between align-items-start mb-2">
                                     <div>
                                         <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月25日
+                                            <i class="bi bi-calendar-event"></i> 7月3日
                                         </span>
                                     </div>
-                                    <span class="badge bg-success">販売中</span>
+                                    <span class="badge bg-success">配信中</span>
                                 </div>
-                                <h5 class="card-title fw-bold mb-2">WINTER ACOUSTIC NIGHT</h5>
+                                <h5 class="card-title fw-bold mb-2">ダンダダン</h5>
                                 <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i> なんばHatch
+                                    <i class="bi bi-building-fill"></i> サイエンスSARU
                                 </p>
                                 <div class="d-flex gap-2 mb-3">
-                                    <span class="badge" style="background-color: #d1fae5; color: #065f46;">アコースティック</span>
-                                    <span class="badge" style="background-color: #fef3c7; color: #92400e;">フォーク</span>
+                                    <span class="badge" style="background-color: #fee2e2; color: #991b1b;">バトル</span>
                                 </div>
                                 <p class="card-text text-muted small mb-3">
-                                    心温まる冬の夜に、アコースティックサウンドを。アットホームな雰囲気の中で音楽を楽しむ
+                                    幽霊と宇宙人、オカルトとバトルが交錯するハイテンポ青春アクション。
                                 </p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥5,500〜</div>
-                                    <button class="btn btn-primary">
-                                        詳細を見る <i class="bi bi-arrow-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="card event-list-card">
-                            <img src="https://placehold.co/600x200/f59e0b/ffffff?text=Hip+Hop" class="event-list-img" alt="Hip Hop">
-                            <div class="card-body">
-                                <div class="d-flex justify-content-between align-items-start mb-2">
-                                    <div>
-                                        <span class="date-badge">
-                                            <i class="bi bi-calendar-event"></i> 12月28日
-                                        </span>
-                                    </div>
-                                    <span class="badge bg-danger">完売間近</span>
-                                </div>
-                                <h5 class="card-title fw-bold mb-2">URBAN BEATS FESTIVAL</h5>
-                                <p class="venue-badge mb-3">
-                                    <i class="bi bi-geo-alt-fill"></i> Zepp Tokyo
-                                </p>
-                                <div class="d-flex gap-2 mb-3">
-                                    <span class="badge" style="background-color: #fce7f3; color: #9f1239;">ヒップホップ</span>
-                                    <span class="badge" style="background-color: #dbeafe; color: #1e40af;">R&B</span>
-                                </div>
-                                <p class="card-text text-muted small mb-3">
-                                    日本のヒップホップシーンを代表するアーティストが集結。アーバンカルチャーの最前線を体感
-                                </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="price-tag">¥6,000〜</div>
+                                    <div class="price-tag">2クール</div>
                                     <button class="btn btn-primary">
                                         詳細を見る <i class="bi bi-arrow-right"></i>
                                     </button>
@@ -567,7 +608,7 @@
                         </div>
                     </div>
                 </div>
-
+                
                 <!-- ページネーション -->
                 <nav aria-label="ページネーション">
                     <ul class="pagination justify-content-center">
@@ -585,3 +626,77 @@
             </div>
         </div>
     </div>
+    
+    <!-- フッター -->
+    <footer class="py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold mb-3"><i class="bi bi-star-fill"></i> AnimeHub</h5>
+                    <p class="text-light">アニメで繋がる、最高の体験をあなたに。</p>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="fw-bold mb-3">サイト情報</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">利用規約</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">プライバシー</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <h6 class="fw-bold mb-3">サポート</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">ヘルプ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">お問い合わせ</a></li>
+                        <li><a href="#" class="text-light text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h6 class="fw-bold mb-3">フォローする</h6>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-light"><i class="bi bi-twitter-x fs-4"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram fs-4"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-youtube fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="border-light">
+            <p class="text-center text-light mb-0">&copy; 2026 AnimeHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById("clearFilterBtn").addEventListener("click", () => {
+        
+            /* ① チェックボックスを全解除 */
+            document.querySelectorAll(
+                '.filter-card input[type="checkbox"]'
+            ).forEach(el => el.checked = false);
+        
+            /* ② ラジオボタンを解除 */
+            document.querySelectorAll(
+                '.filter-card input[type="radio"]'
+            ).forEach(el => el.checked = false);
+        
+            /* ③ アルファベットフィルターの active をリセット */
+            document.querySelectorAll('.alphabet-btn')
+                .forEach(btn => btn.classList.remove('active'));
+        
+            const allBtn = document.querySelector('.alphabet-btn');
+            if (allBtn) allBtn.classList.add('active');
+        
+            /* ④ ソートボタンの active を解除（ある場合） */
+            document.querySelectorAll('.btn-group .btn')
+                .forEach(btn => btn.classList.remove('active'));
+        
+            /* ⑤ 検索ボックスを空に（ある場合） */
+            document.querySelectorAll('input[type="text"]')
+                .forEach(input => input.value = '');
+        
+            /* ⑥ 表示更新用（今後JSフィルター作る用） */
+            console.log("フィルターをクリアしました");
+        });
+    </script>
+</body>
+</html>
